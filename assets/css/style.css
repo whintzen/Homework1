@@ -22,7 +22,7 @@ header {
 /* This color applies to Hori and n  */
 /* display the links in a horizontal position rather than one under the other */
 header h1 {
-    display: inline;
+    display: inline-block;
     font-size: 45px;        
     color: #da1748;   
 }
@@ -31,35 +31,39 @@ header h1 {
     color: #d9dcd6;
 }
 
-header nav {
-    padding-top:15px;
-    margin-right: 25px;
-    float: right;    
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    list-style-type: none;                         
-}
-          
-header nav ul li {
-    clear: both;
-    padding: 10px;    
-    display: inline;
-    overflow: auto;                                                      
-} 
-
-/*  This changes colors as you hover over the header links */
-.topnav {
-    overflow: hidden;
-}
-
-topnav a {
+nav {
+    width: 100%;
+    height:20px ;
     color: black;
-    text-decoration: none;
+    overflow: auto;    
 }
 
-.topnav a:hover {
-    color: rgb(21, 180, 21);    
+ul {
+margin-top: auto;
 }
+
+/* to be able to move around the links*/
+ul li {
+    list-style: none;
+    display: inline-block;
+    float: right;
+    line-height: 20px;
+}
+
+ul li a {clear: both;
+    display: inline-block;
+    overflow: auto;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    padding: 0 20px;
+}
+
+ul li a:hover {
+   color: rgb(21, 180, 21);
+}
+
                     /*------ End of Header Section */
 
 
@@ -100,38 +104,26 @@ section {
          /* Left Side Page Section Content Boxes */
          /* the attributes of these are all the same, but because I wanted specific background
                 color, is the reason for listing these separately */
-.search-engine-optimization {
+
+.middle-section {
     clear: both;
     margin-bottom: 20px;
     overflow: auto; 
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #88c4e9;
     color: #ffffff;
-    outline-style: outset;
+    outline-style: outset;  
+  }              
+#search-engine-optimization {
+    background-color: #88c4e9;
 }
-.online-reputation-management {
-    clear: both;
-    margin-bottom: 20px;
-    overflow: auto; 
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#online-reputation-management {
     background-color: #0072bb;
-    color: #ffffff;
-    outline-style: outset;
 }
-.social-media-marketing {
-    clear: both;
-    margin-bottom: 20px;
-    overflow: auto; 
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#social-media-marketing {
     background-color: #88c4e9;
-    color: #ffffff;
-    outline-style: outset;
+    margin-bottom: 100px;
 }
 article img {
     max-height: 200px;
@@ -147,7 +139,6 @@ article h2 {
 .benefits {
     margin-right: 20px;
     padding: 20px;
-    /* clear: both; */
     float: right;
     width: 20%;
     height: 940px;
@@ -158,6 +149,7 @@ article h2 {
      
 aside h3 {clear: both;
     margin-bottom: 10px;
+    overflow: auto; 
     margin-top: 10px;
     color: #ffffff;    
     text-align: center;    
@@ -174,7 +166,7 @@ img {border-style:outset}
                            /* Right side section of the Page Ends Here */
 
  /* footer */
-footer {clear: both;
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
